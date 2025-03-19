@@ -1,0 +1,33 @@
+/* Import Open Sans from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+/* Apply the standard, legible font to the entire document */
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 30px 30px;
+  padding: 0;
+}
+
+/* Headings use the same font for a unified look */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Open Sans", sans-serif;
+  margin: 0 0 10px;
+}
+
+/* Style for tooltips */
+.tooltip {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #333;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+}

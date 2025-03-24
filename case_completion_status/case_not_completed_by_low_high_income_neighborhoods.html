@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.30.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.21.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.29.0"></script>
+</head>
+<body>
+  <div id="vis"/>
+  <script>
+    const spec = {
+  "config": {"view": {"continuousWidth": 400, "continuousHeight": 300}},
+  "data": {"name": "data-b9fa247b2d095e6bedb297e862130e14"},
+  "mark": "bar",
+  "encoding": {
+    "color": {"type": "nominal", "field": "income_group"},
+    "tooltip": [
+      {"type": "nominal", "field": "income_group"},
+      {"type": "quantitative", "field": "percentage"}
+    ],
+    "x": {"type": "nominal", "field": "income_group"},
+    "y": {"type": "quantitative", "field": "percentage"}
+  },
+  "title": "Percentage of Not Completed Cases by Income Group",
+  "width": 600,
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json",
+  "datasets": {
+    "data-b9fa247b2d095e6bedb297e862130e14": [
+      {"income_group": "Low Income", "percentage": 8.344155844155845},
+      {"income_group": "High Income", "percentage": 1.4402323208539363}
+    ]
+  }
+};
+    vegaEmbed("#vis", spec, {mode: "vega-lite"}).then(console.log).catch(console.warn);
+  </script>
+</body>
+</html>

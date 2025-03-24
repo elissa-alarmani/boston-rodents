@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.30.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.21.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.29.0"></script>
+</head>
+<body>
+  <div id="vis"/>
+  <script>
+    const spec = {
+  "config": {"view": {"continuousWidth": 400, "continuousHeight": 300}},
+  "data": {"name": "data-b1443054040eaa8f93de63166237d7fc"},
+  "mark": "bar",
+  "encoding": {
+    "color": {"type": "nominal", "field": "case_status"},
+    "tooltip": [
+      {"type": "nominal", "field": "neighborhood"},
+      {"type": "nominal", "field": "case_status"},
+      {"type": "quantitative", "field": "count"}
+    ],
+    "x": {"type": "nominal", "field": "neighborhood"},
+    "y": {"type": "quantitative", "field": "count"}
+  },
+  "title": "Case Completion Status by Neighborhood",
+  "width": 600,
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json",
+  "datasets": {
+    "data-b1443054040eaa8f93de63166237d7fc": [
+      {"neighborhood": "Allston", "case_status": "Completed", "count": 43},
+      {
+        "neighborhood": "Allston / Brighton",
+        "case_status": "Completed",
+        "count": 600
+      },
+      {
+        "neighborhood": "Allston / Brighton",
+        "case_status": "Not Completed",
+        "count": 3
+      },
+      {"neighborhood": "Back Bay", "case_status": "Completed", "count": 273},
+      {"neighborhood": "Back Bay", "case_status": "Not Completed", "count": 1},
+      {"neighborhood": "Beacon Hill", "case_status": "Completed", "count": 93},
+      {"neighborhood": "Brighton", "case_status": "Completed", "count": 63},
+      {"neighborhood": "Charlestown", "case_status": "Completed", "count": 132},
+      {
+        "neighborhood": "Charlestown",
+        "case_status": "Not Completed",
+        "count": 1
+      },
+      {"neighborhood": "Dorchester", "case_status": "Completed", "count": 699},
+      {
+        "neighborhood": "Dorchester",
+        "case_status": "Not Completed",
+        "count": 2
+      },
+      {
+        "neighborhood": "Downtown / Financial District",
+        "case_status": "Completed",
+        "count": 227
+      },
+      {
+        "neighborhood": "Downtown / Financial District",
+        "case_status": "Not Completed",
+        "count": 4
+      },
+      {"neighborhood": "East Boston", "case_status": "Completed", "count": 277},
+      {
+        "neighborhood": "East Boston",
+        "case_status": "Not Completed",
+        "count": 3
+      },
+      {
+        "neighborhood": "Fenway / Kenmore / Audubon Circle / Longwood",
+        "case_status": "Completed",
+        "count": 77
+      },
+      {
+        "neighborhood": "Fenway / Kenmore / Audubon Circle / Longwood",
+        "case_status": "Not Completed",
+        "count": 1
+      },
+      {"neighborhood": "Hyde Park", "case_status": "Completed", "count": 127},
+      {"neighborhood": "Hyde Park", "case_status": "Not Completed", "count": 1},
+      {
+        "neighborhood": "Jamaica Plain",
+        "case_status": "Completed",
+        "count": 326
+      },
+      {
+        "neighborhood": "Jamaica Plain",
+        "case_status": "Not Completed",
+        "count": 4
+      },
+      {"neighborhood": "Mattapan", "case_status": "Completed", "count": 197},
+      {"neighborhood": "Mattapan", "case_status": "Not Completed", "count": 2},
+      {
+        "neighborhood": "Mission Hill",
+        "case_status": "Completed",
+        "count": 110
+      },
+      {"neighborhood": "Roslindale", "case_status": "Completed", "count": 158},
+      {
+        "neighborhood": "Roslindale",
+        "case_status": "Not Completed",
+        "count": 3
+      },
+      {"neighborhood": "Roxbury", "case_status": "Completed", "count": 463},
+      {"neighborhood": "Roxbury", "case_status": "Not Completed", "count": 8},
+      {"neighborhood": "South Boston", "case_status": "Completed", "count": 30},
+      {
+        "neighborhood": "South Boston",
+        "case_status": "Not Completed",
+        "count": 1
+      },
+      {
+        "neighborhood": "South Boston / South Boston Waterfront",
+        "case_status": "Completed",
+        "count": 314
+      },
+      {
+        "neighborhood": "South Boston / South Boston Waterfront",
+        "case_status": "Not Completed",
+        "count": 8
+      },
+      {"neighborhood": "South End", "case_status": "Completed", "count": 390},
+      {"neighborhood": "South End", "case_status": "Not Completed", "count": 7},
+      {"neighborhood": "West Roxbury", "case_status": "Completed", "count": 153}
+    ]
+  }
+};
+    vegaEmbed("#vis", spec, {mode: "vega-lite"}).then(console.log).catch(console.warn);
+  </script>
+</body>
+</html>

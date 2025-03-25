@@ -6,13 +6,6 @@
     <title>Ds4200 Group Project 11</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="style.css" />
-
-    <style>
-      /* Set map container height and basic styling */
-      #map {
-        height: 800px;
-      }
-    </style>
   </head>
   <body>
     <h1>Title</h1>
@@ -25,6 +18,38 @@
     </p>
 
     <p>Two links to the references</p>
+
+    <h2>Neighborhood Selection</h2>
+    <select id="neighborhoodSelect">
+      <option value="">-- Select a Neighborhood --</option>
+      <option value="boston">Boston</option>
+      <option value="allston">Allston</option>
+      <option value="backbay">Back Bay</option>
+      <option value="beaconhill">Beacon Hill</option>
+      <option value="brighton">Brighton</option>
+      <option value="charlestown">Charlestown</option>
+      <option value="dorchester">Dorchester</option>
+      <option value="downtown">Downtown</option>
+      <option value="eastboston">East Boston</option>
+      <option value="fenway">Fenway</option>
+      <option value="hydepark">Hyde Park</option>
+      <option value="jamaicaplain">Jamaica Plain</option>
+      <option value="mattapan">Mattapan</option>
+      <option value="missionhill">Mission Hill</option>
+      <option value="roslindale">Roslindale</option>
+      <option value="roxbury">Roxbury</option>
+      <option value="southboston">South Boston</option>
+      <option value="southend">South End</option>
+      <option value="westroxbury">West Roxbury</option>
+    </select>
+    <div id="imageContainer">
+      <img
+        id="neighborhoodImage"
+        src=""
+        alt="Neighborhood Image"
+        style="display: none; max-width: 80%; margin-top: 20px"
+      />
+    </div>
 
     <h2>Visualization 1</h2>
     <div>
@@ -61,10 +86,7 @@
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <!-- <script src="visualization1.js"></script>
-    <script src="visualization2.js"></script>
-    <script src="visualization3.js"></script>
-    <script src="visualization4.js"></script> -->
-    <script src="visualization5.js"></script>
+    <script src="map.js"></script>
+    <script src="neighborhoodDemoDropdown.js"></script>
   </body>
 </html>

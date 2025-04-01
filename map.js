@@ -53,5 +53,5 @@ d3.csv("rodent_data_with_neighborhoods.csv")
     });
   })
   .catch((error) => {
-    console.error("Error loading CSV data:", error);
+    console.error("Error loading data:", error);
   });

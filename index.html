@@ -19,81 +19,90 @@
 
     <p>Two links to the references</p>
 
-    <h2>Neighborhood Selection</h2>
-    <select id="neighborhoodSelect">
-      <option value="">-- Select a Neighborhood --</option>
-      <option value="boston">Boston</option>
-      <option value="allston">Allston</option>
-      <option value="backbay">Back Bay</option>
-      <option value="beaconhill">Beacon Hill</option>
-      <option value="brighton">Brighton</option>
-      <option value="charlestown">Charlestown</option>
-      <option value="dorchester">Dorchester</option>
-      <option value="downtown">Downtown</option>
-      <option value="eastboston">East Boston</option>
-      <option value="fenway">Fenway</option>
-      <option value="hydepark">Hyde Park</option>
-      <option value="jamaicaplain">Jamaica Plain</option>
-      <option value="mattapan">Mattapan</option>
-      <option value="missionhill">Mission Hill</option>
-      <option value="roslindale">Roslindale</option>
-      <option value="roxbury">Roxbury</option>
-      <option value="southboston">South Boston</option>
-      <option value="southend">South End</option>
-      <option value="westroxbury">West Roxbury</option>
-    </select>
-    <div id="imageContainer">
-      <img
-        id="neighborhoodImage"
-        src=""
-        alt="Neighborhood Image"
-        style="display: none; max-width: 45%; margin-top: 20px"
-      />
-    </div>
+    <!-- SECTION 1 -->
+    <section class="section-block">
+      <h2 class="section-title">
+        1. Exploratory Race by Neighborhood Analysis
+      </h2>
 
-    <h2>Exploratory Race by Neighborhood Analysis</h2>
-    <h3>Race Bar Chart by Neighborhood</h3>
-    <iframe
-      src="rats_neighborhood_race.html"
-      width="75%"
-      height="850"
-      style="border: none"
-    ></iframe>
-    <p>Takeaway</p>
-
-    <h2>Rat Reports by Neighborhood</h2>
-
-    <h3>Rat Counts Per Capita</h3>
-    <div style="display: flex; gap: 20px; flex-wrap: wrap">
-      <div style="flex: 1 1 48%">
-        <h4>By Neighborhood</h4>
-        <iframe
-          src="rodents_per_capita/rodents_per_capita_by_neighborhood.html"
-          width="100%"
-          height="600"
-          style="border: none"
-        ></iframe>
+      <h3>Neighborhood Selection</h3>
+      <select id="neighborhoodSelect">
+        <option value="">-- Select a Neighborhood --</option>
+        <option value="boston">Boston</option>
+        <option value="allston">Allston</option>
+        <option value="backbay">Back Bay</option>
+        <option value="beaconhill">Beacon Hill</option>
+        <option value="brighton">Brighton</option>
+        <option value="charlestown">Charlestown</option>
+        <option value="dorchester">Dorchester</option>
+        <option value="downtown">Downtown</option>
+        <option value="eastboston">East Boston</option>
+        <option value="fenway">Fenway</option>
+        <option value="hydepark">Hyde Park</option>
+        <option value="jamaicaplain">Jamaica Plain</option>
+        <option value="mattapan">Mattapan</option>
+        <option value="missionhill">Mission Hill</option>
+        <option value="roslindale">Roslindale</option>
+        <option value="roxbury">Roxbury</option>
+        <option value="southboston">South Boston</option>
+        <option value="southend">South End</option>
+        <option value="westroxbury">West Roxbury</option>
+      </select>
+      <div id="imageContainer">
+        <img
+          id="neighborhoodImage"
+          src=""
+          alt="Neighborhood Image"
+          style="display: none; max-width: 45%; margin-top: 20px"
+        />
       </div>
-      <div style="flex: 1 1 48%">
-        <h4>By Neighborhood Income Level</h4>
-        <iframe
-          src="rodents_per_capita/rodents_per_capita_by_low_high_income_neighborhoods.html"
-          width="100%"
-          height="600"
-          style="border: none"
-        ></iframe>
+
+      <h3>Race Bar Chart by Neighborhood</h3>
+      <iframe
+        src="rats_neighborhood_race.html"
+        width="75%"
+        height="850"
+        style="border: none"
+      ></iframe>
+      <p>Takeaway:</p>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section class="section-block">
+      <h2 class="section-title">2. Rat Reports by Neighborhood</h2>
+
+      <h3>Rat Counts Per Capita</h3>
+      <div style="display: flex; gap: 20px; flex-wrap: wrap">
+        <div style="flex: 1 1 48%">
+          <h4>By Neighborhood</h4>
+          <iframe
+            src="rodents_per_capita/rodents_per_capita_by_neighborhood.html"
+            width="100%"
+            height="600"
+            style="border: none"
+          ></iframe>
+        </div>
+        <div style="flex: 1 1 48%">
+          <h4>By Neighborhood Income Level</h4>
+          <iframe
+            src="rodents_per_capita/rodents_per_capita_by_low_high_income_neighborhoods.html"
+            width="100%"
+            height="600"
+            style="border: none"
+          ></iframe>
+        </div>
       </div>
-    </div>
-    <p>Takeaway</p>
+      <p>Takeaway:</p>
 
-    <h3>Aggregate Race Group Comparisons</h3>
-    <p>
-      Takeaway: Rat prevalence differences between racial majority and minority
-      areas.
-    </p>
+      <h3>Aggregate Race Group Comparisons</h3>
+      <h4>Select drop down</h4>
+      <p>Takeaway:</p>
+    </section>
 
-    <h2>Case Completion Analysis</h2>
-    <div>
+    <!-- SECTION 3 -->
+    <section class="section-block">
+      <h2 class="section-title">3. Case Completion Analysis</h2>
+
       <details open>
         <summary>Completion Status by Neighborhood</summary>
         <iframe
@@ -163,37 +172,47 @@
           style="border: none"
         ></iframe>
       </details>
-    </div>
-    <p>Takeaway</p>
 
-    <h2>Neighborhood Incident Scatter Map</h2>
-    <p>
-      The interactive scatter map allows users to explore the exact locations of
-      rodent-related 311 complaints throughout Boston. Each data point
-      represents a reported rodent incident and is color-coded by neighborhood
-      for easy visual differentiation. Users can zoom and pan around the city,
-      and clicking on any point reveals detailed case-level information,
-      including the case ID, street name, ward, and neighborhood. This
-      interactivity makes it intuitive to identify clusters of rodent activity
-      and explore neighborhood-specific patterns in depth, supporting an
-      accessible and engaging user experience for both casual viewers and data
-      analysts.
-    </p>
-    <div id="map" style="height: 600px"></div>
-    <p>
-      Takeaway: This map visualizes the geographic distribution of
-      rodent-related 311 cases across Boston. Each dot represents an individual
-      report, color-coded by neighborhood, allowing for immediate identification
-      of spatial clusters and neighborhood-specific patterns. Denser
-      concentrations of reports in certain areas suggest localized rodent issues
-      that may correlate with population density, income, or infrastructure
-      conditions.
-    </p>
+      <p>
+        <strong>Takeaway:</strong> Some neighborhoods face higher rates of
+        incomplete or delayed responses.
+      </p>
+    </section>
 
-    <p>
-      A summary for all your findings, including what you have learned from the
-      data visualization and what can be done in the future.
-    </p>
+    <!-- MAP -->
+    <section class="section-block">
+      <h2 class="section-title">Interactive Rodent Incident Map</h2>
+      <p>
+        The interactive scatter map allows users to explore the exact locations
+        of rodent-related 311 complaints throughout Boston. Each data point
+        represents a reported rodent incident and is color-coded by neighborhood
+        for easy visual differentiation. Users can zoom and pan around the city,
+        and clicking on any point reveals detailed case-level information,
+        including the case ID, street name, ward, and neighborhood. This
+        interactivity makes it intuitive to identify clusters of rodent activity
+        and explore neighborhood-specific patterns in depth, supporting an
+        accessible and engaging user experience for both casual viewers and data
+        analysts.
+      </p>
+      <div id="map"></div>
+      <p>
+        <strong>Takeaway:</strong> This map visualizes the geographic
+        distribution of rodent-related 311 cases across Boston. Each dot
+        represents an individual report, color-coded by neighborhood, allowing
+        for immediate identification of spatial clusters and
+        neighborhood-specific patterns. Denser concentrations of reports in
+        certain areas suggest localized rodent issues that may correlate with
+        population density, income, or infrastructure conditions.
+      </p>
+    </section>
+
+    <section class="section-block">
+      <h2 class="section-title">Conclusion</h2>
+      <p>
+        A summary for all your findings, including what you have learned from
+        the data visualization and what can be done in the future.
+      </p>
+    </section>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>

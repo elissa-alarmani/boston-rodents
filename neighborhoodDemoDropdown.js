@@ -1,6 +1,4 @@
-// Wait for the DOM to load before running the script
 document.addEventListener("DOMContentLoaded", () => {
-  // Mapping of neighborhood keys to image file paths
   const neighborhoodImages = {
     allston: "neighborhood_race_pie_charts/allston_racial_proportions.png",
     backbay: "neighborhood_race_pie_charts/back_bay_racial_proportions.png",
@@ -32,25 +30,20 @@ document.addEventListener("DOMContentLoaded", () => {
       "neighborhood_race_pie_charts/west_roxbury_racial_proportions.png",
   };
 
-  // Get references to the dropdown and image elements
   const selectElement = document.getElementById("neighborhoodSelect");
   const imageElement = document.getElementById("neighborhoodImage");
 
-  // If the select element isn't found, log an error and exit
   if (!selectElement) {
     console.error('Element with id "neighborhoodSelect" not found.');
     return;
   }
 
-  // Listen for changes on the dropdown menu
   selectElement.addEventListener("change", function () {
     const selectedNeighborhood = this.value;
     if (selectedNeighborhood && neighborhoodImages[selectedNeighborhood]) {
-      // Update the image source to show the corresponding neighborhood image
       imageElement.src = neighborhoodImages[selectedNeighborhood];
       imageElement.style.display = "block";
     } else {
-      // Hide the image if no valid neighborhood is selected
       imageElement.style.display = "none";
     }
   });

@@ -46,6 +46,19 @@ h6 {
   margin-bottom: 6px;
 }
 
+nav {
+  background-color: #f0f0f0;
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
 p {
   color: var(--gray);
   margin-bottom: 14px;

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rats! - Visualizations</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Introduction</a>
+      <a href="visualizations.html">Visualizations</a>
+      <a href="conclusion.html">Conclusion</a>
+    </nav>
+
+    <!-- SECTION 1 -->
+    <section class="section-block">
+      <h2 class="section-title">
+        1. Exploratory Race by Neighborhood Analysis
+      </h2>
+
+      <h3>Neighborhood Selection</h3>
+      <select id="neighborhoodSelect">
+        <option value="">-- Select a Neighborhood --</option>
+        <option value="boston">Boston</option>
+        <option value="allston">Allston</option>
+        <option value="backbay">Back Bay</option>
+        <option value="beaconhill">Beacon Hill</option>
+        <option value="brighton">Brighton</option>
+        <option value="charlestown">Charlestown</option>
+        <option value="dorchester">Dorchester</option>
+        <option value="downtown">Downtown</option>
+        <option value="eastboston">East Boston</option>
+        <option value="fenway">Fenway</option>
+        <option value="hydepark">Hyde Park</option>
+        <option value="jamaicaplain">Jamaica Plain</option>
+        <option value="mattapan">Mattapan</option>
+        <option value="missionhill">Mission Hill</option>
+        <option value="roslindale">Roslindale</option>
+        <option value="roxbury">Roxbury</option>
+        <option value="southboston">South Boston</option>
+        <option value="southend">South End</option>
+        <option value="westroxbury">West Roxbury</option>
+      </select>
+      <div id="imageContainer">
+        <img
+          id="neighborhoodImage"
+          src=""
+          alt="Neighborhood Image"
+          style="display: none; max-width: 45%; margin-top: 20px"
+        />
+      </div>
+
+      <h3>Race Bar Chart by Neighborhood</h3>
+      <iframe
+        src="racial_composition_bar.html"
+        width="65%"
+        height="650"
+        style="border: none"
+      ></iframe>
+      <p>
+        <strong>Takeaway:</strong> This graph explores the racial makeup of each
+        neighborhood in Boston. It shows that the neighborhoods with the highest
+        percentage of White population are Beacon Hill, South Boston, and
+        Charlestown. Additionally, Downtown has the highest Asian population,
+        East Boston has the highest Hispanic population, and Mattapan has the
+        highest Black population. It is clear that each neighborhood is
+        different, with no clear pattern of one racial group being the majority
+        in every neighborhood. The key takeaway of this is that there is a lot
+        of variation among Boston neighborhoods, but not necessarily within
+        them.
+      </p>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section class="section-block">
+      <h2 class="section-title">2. Rat Reports by Neighborhood</h2>
+
+      <h3>Rat Counts Per Capita</h3>
+      <div style="display: flex; gap: 20px; flex-wrap: wrap">
+        <div style="flex: 1 1 48%">
+          <h4>By Neighborhood</h4>
+          <iframe
+            src="rodents_per_capita/rodents_per_capita_by_neighborhood.html"
+            width="100%"
+            height="600"
+            style="border: none"
+          ></iframe>
+        </div>
+        <div style="flex: 1 1 48%">
+          <h4>By Neighborhood Income Level</h4>
+          <iframe
+            src="rodents_per_capita/rodents_per_capita_by_low_high_income_neighborhoods.html"
+            width="100%"
+            height="600"
+            style="border: none"
+          ></iframe>
+        </div>
+      </div>
+      <p>Takeaway:</p>
+
+      <h3>Aggregate Race Group Comparisons</h3>
+      <select id="sightingsSelect">
+        <option value="">-- Select a Race --</option>
+        <option value="asian">Asian</option>
+        <option value="black">Black</option>
+        <option value="hispanic">Hispanic</option>
+        <option value="white">White</option>
+      </select>
+      <div id="imageContainer">
+        <img
+          id="sightingImage"
+          src=""
+          alt="Sighting Image"
+          style="display: none; max-width: 45%; margin-top: 20px"
+        />
+      </div>
+      <p>
+        <strong>Takeaway:</strong> This series of graphs explores rat sightings
+        in different neighborhoods based on their racial makeup. The graphs
+        exploring the neighborhoods with the highest and lowest Black, Asian,
+        and Hispanic populations all follow the same pattern: the neighborhoods
+        with more of those populations have more rat sightings, and the
+        neighborhoods with less of those populations have less rat sightings.
+        The graph that explores the rat sightings in the highest and lowest
+        White neighborhoods show the opposite: the top three percent White
+        neighborhoods have lower rat sightings than the bottom three percent
+        White neighborhoods. This concludes that the higher the percentage of
+        White people in the neighborhood, the lower the count of rat sightings.
+      </p>
+    </section>
+
+    <!-- SECTION 3 -->
+    <section class="section-block">
+      <h2 class="section-title">3. Case Completion Analysis</h2>
+
+      <details open>
+        <summary>Completion Status by Neighborhood</summary>
+        <iframe
+          src="case_completion_status/case_completion_status_by_neighborhood.html"
+          width="100%"
+          height="600"
+          style="border: none"
+        ></iframe>
+      </details>
+
+      <details>
+        <summary>Completion Time (Low vs High Income, No Outliers)</summary>
+        <iframe
+          src="case_completion_status/case_completion_time_by_low_high_income_neighborhoods_no_outiers.html"
+          width="100%"
+          height="600"
+          style="border: none"
+        ></iframe>
+      </details>
+
+      <details>
+        <summary>Completion Time (Low vs High Income)</summary>
+        <iframe
+          src="case_completion_status/case_completion_time_by_low_high_income_neighborhoods.html"
+          width="100%"
+          height="600"
+          style="border: none"
+        ></iframe>
+      </details>
+
+      <details>
+        <summary>Time Distribution by Neighborhood (No Outliers)</summary>
+        <iframe
+          src="case_completion_status/case_completion_time_dist_by_neighborhood_no_outliers.html"
+          width="100%"
+          height="600"
+          style="border: none"
+        ></iframe>
+      </details>
+
+      <details>
+        <summary>Time Distribution by Neighborhood</summary>
+        <iframe
+          src="case_completion_status/case_completion_time_dist_by_neighborhood.html"
+          width="100%"
+          height="600"
+          style="border: none"
+        ></iframe>
+      </details>
+
+      <details>
+        <summary>Not Completed: Income-Level Comparison</summary>
+        <iframe
+          src="case_completion_status/case_not_completed_by_low_high_income_neighborhoods.html"
+          width="100%"
+          height="600"
+          style="border: none"
+        ></iframe>
+      </details>
+
+      <details>
+        <summary>Not Completed: Neighborhood Breakdown</summary>
+        <iframe
+          src="case_completion_status/case_not_completed_by_neighborhood.html"
+          width="100%"
+          height="600"
+          style="border: none"
+        ></iframe>
+      </details>
+
+      <p>
+        <strong>Takeaway:</strong>
+      </p>
+    </section>
+
+    <!-- MAP -->
+    <section class="section-block">
+      <h2 class="section-title">Interactive Rodent Incident Map</h2>
+      <p>
+        The interactive scatter map allows users to explore the exact locations
+        of rodent-related 311 complaints throughout Boston. Each data point
+        represents a reported rodent incident and is color-coded by neighborhood
+        for easy visual differentiation. Users can zoom and pan around the city,
+        and clicking on any point reveals detailed case-level information,
+        including the case ID, street name, ward, and neighborhood. This
+        interactivity makes it intuitive to identify clusters of rodent activity
+        and explore neighborhood-specific patterns in depth, supporting an
+        accessible and engaging user experience for both casual viewers and data
+        analysts.
+      </p>
+      <div id="map"></div>
+      <p>
+        <strong>Takeaway:</strong> This map visualizes the geographic
+        distribution of rodent-related 311 cases across Boston. Each dot
+        represents an individual report, color-coded by neighborhood, allowing
+        for immediate identification of spatial clusters and
+        neighborhood-specific patterns. Denser concentrations of reports in
+        certain areas suggest localized rodent issues that may correlate with
+        population density, income, or infrastructure conditions.
+      </p>
+    </section>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="map.js"></script>
+    <script src="neighborhoodDemoDropdown.js"></script>
+    <script src="sightingsDropdown.js"></script>
+  </body>
+</html>

@@ -15,6 +15,13 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
+  const defaultSighting = "asian";
+  if (sightingsImages[defaultSighting]) {
+    imageElement.src = sightingsImages[defaultSighting];
+    imageElement.style.display = "block";
+    selectElement.value = defaultSighting;
+  }
+
   selectElement.addEventListener("change", function () {
     const selectedSighting = this.value;
     if (selectedSighting && sightingsImages[selectedSighting]) {

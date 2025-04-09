@@ -118,3 +118,17 @@ iframe {
   border-radius: 12px;
   margin-top: 20px;
 }
+
+.interactive-callout {
+  background-color: #f9f9f9;
+  border-left: 6px solid #db7093;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+}
+.interactive-callout h3 {
+  margin-top: 0;
+}
+.interactive-callout ul {
+  margin: 0;
+  padding-left: 20px;
+}

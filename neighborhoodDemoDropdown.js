@@ -38,6 +38,13 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
+  const defaultNeighborhood = "boston";
+  if (neighborhoodImages[defaultNeighborhood]) {
+    imageElement.src = neighborhoodImages[defaultNeighborhood];
+    imageElement.style.display = "block";
+    selectElement.value = defaultNeighborhood;
+  }
+
   selectElement.addEventListener("change", function () {
     const selectedNeighborhood = this.value;
     if (selectedNeighborhood && neighborhoodImages[selectedNeighborhood]) {

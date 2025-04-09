@@ -54,6 +54,25 @@
       </div>
 
       <h3>Race Bar Chart by Neighborhood</h3>
+
+      <div class="interactive-callout">
+        <h3 style="margin-top: 0">🔍 Interactive!</h3>
+        <ul style="margin: 0; padding-left: 20px">
+          <li>
+            <strong>Hover over</strong> each bar segment to see the neighborhood
+            name and the race group’s percentage.
+          </li>
+          <li>
+            This stacked bar chart shows the
+            <strong>racial composition</strong> of every Boston neighborhood.
+          </li>
+          <li>
+            Compare racial diversity across communities and look for standout
+            trends or imbalances.
+          </li>
+        </ul>
+      </div>
+
       <iframe
         src="racial_composition_bar.html"
         width="65%"
@@ -214,19 +233,33 @@
     <!-- MAP -->
     <section class="section-block">
       <h2 class="section-title">Interactive Rodent Incident Map</h2>
+
+      <div class="interactive-callout">
+        <h3 style="margin-top: 0">🔍 Interactive!</h3>
+        <ul style="margin: 0; padding-left: 20px">
+          <li>
+            <strong>Pan and zoom</strong> across Boston to explore rodent
+            reports by neighborhood.
+          </li>
+          <li>
+            <strong>Click</strong> on any dot to reveal case-level details like
+            ID, street, and ward.
+          </li>
+          <li>
+            <strong>Look for clusters</strong> to spot high-activity areas and
+            possible rodent hotspots.
+          </li>
+        </ul>
+      </div>
+
       <p>
-        The interactive scatter map allows users to explore the exact locations
-        of rodent-related 311 complaints throughout Boston. Each data point
-        represents a reported rodent incident and is color-coded by neighborhood
-        for easy visual differentiation. Users can zoom and pan around the city,
-        and clicking on any point reveals detailed case-level information,
-        including the case ID, street name, ward, and neighborhood. This
-        interactivity makes it intuitive to identify clusters of rodent activity
-        and explore neighborhood-specific patterns in depth, supporting an
-        accessible and engaging user experience for both casual viewers and data
-        analysts.
+        The map displays the geographic distribution of rodent-related 311
+        complaints throughout Boston. Each data point represents a report and is
+        color-coded by neighborhood, providing visual clarity on regional
+        trends.
       </p>
-      <div id="map"></div>
+
+      <div id="map" style="height: 600px"></div>
       <p>
         <strong>Takeaway:</strong> This map visualizes the geographic
         distribution of rodent-related 311 cases across Boston. Each dot

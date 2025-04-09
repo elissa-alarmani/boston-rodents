@@ -17,13 +17,66 @@
     <h1>
       Boston’s Rampant Rodents: Which neighborhoods face the most infestation?
     </h1>
-    <h4>
-      An overall introduction to your project, including the topic and tasks.
-    </h4>
+    <h2>Introduction</h2>
+
+    <h2>Data</h2>
     <p>
-      A paragraph to introduce the data, including the size, source and
-      attributes.
+      We used two datasets from the City of Boston’s open data portal: the
+      <a
+        href="https://data.boston.gov/dataset/311-service-requests"
+        target="_blank"
+        >311 Service Requests dataset</a
+      >
+      and the
+      <a
+        href="https://data.boston.gov/dataset/neighborhood-demographics/resource/d8c23c6a-b868-4ba4-8a3b-b9615a21be07"
+        target="_blank"
+        >Neighborhood Demographics dataset</a
+      >. The 311 dataset contains over 200,000 records, but it has been cleaned
+      to capture the 5,015 entries related to rodent activity. The Neighborhood
+      Demographics dataset provides us with socioeconomic data like household
+      income, racial composition, and population size. Merging these two
+      datasets allowed for us to analyze rodent activity about socioeconomic
+      factors in Boston, making it suitable for our analysis. It also includes
+      geospatial data to analyze the rodent activity. By merging these datasets
+      on the neighborhood field, we examined whether lower-income and racially
+      marginalized communities experience disproportionately high rodent
+      activity and slower municipal response times. More specifically, we used
+      the features relating to percentage of a racial demographic in each
+      neighborhood, income levels, and open and close date for case information.
     </p>
+
+    <h3>Attributes in the Data:</h3>
+    <pre
+      style="
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-left: 4px solid #db7093;
+        overflow-x: auto;
+      "
+    >
+    <code>
+    ['case_enquiry_id', 'open_dt', 'sla_target_dt', 'closed_dt', 'on_time',
+     'case_status', 'closure_reason', 'case_title', 'subject', 'reason',
+     'type', 'queue', 'department', 'submitted_photo', 'closed_photo',
+     'location', 'fire_district', 'pwd_district', 'city_council_district',
+     'police_district', 'neighborhood', 'neighborhood_services_district',
+     'ward', 'precinct', 'location_street_name', 'location_zipcode',
+     'latitude', 'longitude', 'geom_4326', 'source', 'Neighborhood',
+     'Total Population', 'White Alone', 'White Alone %',
+     'Black/African-American', 'Black/African-American %', 'Hispanic',
+     'Hispanic %', 'Asian alone', 'Asian alone %', 'Other Races',
+     'Other Races %',
+     'Aggregate income in the past 12 months (in 2019 Inflation-adjusted dollars)',
+     'Per Capita Income', 'Median Income', 'Total Families',
+     'Married-couple family', 'Married-couple family %', 'Male householder',
+     'Male householder %', 'Female householder', 'Female householder %',
+     'Householder living alone', 'Householder living alone %',
+     'Householder not living alone', 'Householder not living alone %']
+    </code>
+    </pre>
+
+    <h2>References</h2>
     <p>Two links to the references</p>
   </body>
 

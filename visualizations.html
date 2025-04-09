@@ -121,21 +121,44 @@
       <p>Takeaway:</p>
 
       <h3>Aggregate Race Group Comparisons</h3>
-      <select id="sightingsSelect">
-        <option value="">-- Select a Race --</option>
-        <option value="asian">Asian</option>
-        <option value="black">Black</option>
-        <option value="hispanic">Hispanic</option>
-        <option value="white">White</option>
-      </select>
-      <div id="imageContainer">
-        <img
-          id="sightingImage"
-          src=""
-          alt="Sighting Image"
-          style="display: none; max-width: 45%; margin-top: 20px"
-        />
+      <div
+        style="
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 30px;
+          width: 70%;
+          margin-top: 30px;
+        "
+      >
+        <div>
+          <img
+            src="sightings_racial_top_3_bottom_3/sightings_by_high_low_Asian.png"
+            style="width: 100%"
+          />
+        </div>
+
+        <div>
+          <img
+            src="sightings_racial_top_3_bottom_3/sightings_by_high_low_Black.png"
+            style="width: 100%"
+          />
+        </div>
+
+        <div>
+          <img
+            src="sightings_racial_top_3_bottom_3/sightings_by_high_low_Hispanic.png"
+            style="width: 100%"
+          />
+        </div>
+
+        <div>
+          <img
+            src="sightings_racial_top_3_bottom_3/sightings_by_high_low_White.png"
+            style="width: 100%"
+          />
+        </div>
       </div>
+
       <p>
         <strong>Takeaway:</strong> This series of graphs explores rat sightings
         in different neighborhoods based on their racial makeup. The graphs

@@ -96,10 +96,8 @@
     <section class="section-block">
       <h2 class="section-title">2. Rat Reports by Neighborhood</h2>
 
-      <h3>Rat Counts Per Capita</h3>
       <div style="display: flex; gap: 20px; flex-wrap: wrap">
         <div style="flex: 1 1 48%">
-          <h4>By Neighborhood</h4>
           <iframe
             src="rodents_per_capita/rodents_capita_neighborhood.html"
             width="100%"
@@ -108,7 +106,6 @@
           ></iframe>
         </div>
         <div style="flex: 1 1 48%">
-          <h4>By Neighborhood Income Level</h4>
           <iframe
             src="rodents_per_capita/rodents_capita_income.html"
             width="100%"
@@ -178,6 +175,15 @@
       <h2 class="section-title">3. Case Completion Analysis</h2>
 
       <div style="max-width: 900px; text-align: left">
+        <div class="interactive-callout">
+          <h3 style="margin-top: 0">🔍 Interactive!</h3>
+          <ul style="margin: 0; padding-left: 20px">
+            <li>
+              <strong>Hover over</strong> each box plot to view values as well
+              as the outliers to view comepleteion time .
+            </li>
+          </ul>
+        </div>
         <h3>Completion Time (Low vs High Income)</h3>
         <iframe
           src="case_completion_status/case_time_income.html"
@@ -186,7 +192,15 @@
           style="border: none"
         ></iframe>
 
-        <h3>Not Completed: Income-Level Comparison</h3>
+        <div class="interactive-callout">
+          <h3 style="margin-top: 0">🔍 Interactive!</h3>
+          <ul style="margin: 0; padding-left: 20px">
+            <li>
+              <strong>Hover over</strong> each bar segment to see the income
+              group and percentage of not completed cases.
+            </li>
+          </ul>
+        </div>
         <iframe
           src="case_completion_status/percent_not_completed_income.html"
           width="85%"
@@ -194,7 +208,15 @@
           style="border: none"
         ></iframe>
 
-        <h3>Not Completed: Neighborhood Breakdown</h3>
+        <div class="interactive-callout">
+          <h3 style="margin-top: 0">🔍 Interactive!</h3>
+          <ul style="margin: 0; padding-left: 20px">
+            <li>
+              <strong>Hover over</strong> each bar segment to see the
+              neighborhood name and percentage of not completed cases.
+            </li>
+          </ul>
+        </div>
         <iframe
           src="case_completion_status/percent_not_completed_neighborhood.html"
           width="85%"

@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
     backbay: "neighborhood_race_pie_charts/back_bay_racial_proportions.png",
     beaconhill:
       "neighborhood_race_pie_charts/beacon_hill_racial_proportions.png",
-    boston: "neighborhood_race_pie_charts/boston_racial_proportions.png",
     brighton: "neighborhood_race_pie_charts/brighton_racial_proportions.png",
     charlestown:
       "neighborhood_race_pie_charts/charlestown_racial_proportions.png",
@@ -38,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  const defaultNeighborhood = "boston";
+  const defaultNeighborhood = "allston";
   if (neighborhoodImages[defaultNeighborhood]) {
     imageElement.src = neighborhoodImages[defaultNeighborhood];
     imageElement.style.display = "block";

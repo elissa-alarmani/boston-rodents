@@ -24,7 +24,6 @@
       <h3>Neighborhood Selection</h3>
       <select id="neighborhoodSelect">
         <option value="">-- Select a Neighborhood --</option>
-        <option value="boston">Boston</option>
         <option value="allston">Allston</option>
         <option value="backbay">Back Bay</option>
         <option value="beaconhill">Beacon Hill</option>
@@ -102,7 +101,7 @@
         <div style="flex: 1 1 48%">
           <h4>By Neighborhood</h4>
           <iframe
-            src="rodents_per_capita/rodents_per_capita_by_neighborhood.html"
+            src="rodents_per_capita/rodents_capita_neighborhood.html"
             width="100%"
             height="600"
             style="border: none"
@@ -111,7 +110,7 @@
         <div style="flex: 1 1 48%">
           <h4>By Neighborhood Income Level</h4>
           <iframe
-            src="rodents_per_capita/rodents_per_capita_by_low_high_income_neighborhoods.html"
+            src="rodents_per_capita/rodents_capita_income.html"
             width="100%"
             height="600"
             style="border: none"
@@ -178,79 +177,35 @@
     <section class="section-block">
       <h2 class="section-title">3. Case Completion Analysis</h2>
 
-      <details open>
-        <summary>Completion Status by Neighborhood</summary>
+      <div style="max-width: 900px; text-align: left">
+        <h3>Completion Time (Low vs High Income)</h3>
         <iframe
-          src="case_completion_status/case_completion_status_by_neighborhood.html"
-          width="100%"
+          src="case_completion_status/case_time_income.html"
+          width="85%"
           height="600"
           style="border: none"
         ></iframe>
-      </details>
 
-      <details>
-        <summary>Completion Time (Low vs High Income, No Outliers)</summary>
+        <h3>Not Completed: Income-Level Comparison</h3>
         <iframe
-          src="case_completion_status/case_completion_time_by_low_high_income_neighborhoods_no_outiers.html"
-          width="100%"
+          src="case_completion_status/percent_not_completed_income.html"
+          width="85%"
           height="600"
           style="border: none"
         ></iframe>
-      </details>
 
-      <details>
-        <summary>Completion Time (Low vs High Income)</summary>
+        <h3>Not Completed: Neighborhood Breakdown</h3>
         <iframe
-          src="case_completion_status/case_completion_time_by_low_high_income_neighborhoods.html"
-          width="100%"
+          src="case_completion_status/percent_not_completed_neighborhood.html"
+          width="85%"
           height="600"
           style="border: none"
         ></iframe>
-      </details>
 
-      <details>
-        <summary>Time Distribution by Neighborhood (No Outliers)</summary>
-        <iframe
-          src="case_completion_status/case_completion_time_dist_by_neighborhood_no_outliers.html"
-          width="100%"
-          height="600"
-          style="border: none"
-        ></iframe>
-      </details>
-
-      <details>
-        <summary>Time Distribution by Neighborhood</summary>
-        <iframe
-          src="case_completion_status/case_completion_time_dist_by_neighborhood.html"
-          width="100%"
-          height="600"
-          style="border: none"
-        ></iframe>
-      </details>
-
-      <details>
-        <summary>Not Completed: Income-Level Comparison</summary>
-        <iframe
-          src="case_completion_status/case_not_completed_by_low_high_income_neighborhoods.html"
-          width="100%"
-          height="600"
-          style="border: none"
-        ></iframe>
-      </details>
-
-      <details>
-        <summary>Not Completed: Neighborhood Breakdown</summary>
-        <iframe
-          src="case_completion_status/case_not_completed_by_neighborhood.html"
-          width="100%"
-          height="600"
-          style="border: none"
-        ></iframe>
-      </details>
-
-      <p>
-        <strong>Takeaway:</strong>
-      </p>
+        <p>
+          <strong>Takeaway:</strong>
+        </p>
+      </div>
     </section>
 
     <!-- MAP -->

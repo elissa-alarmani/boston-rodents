@@ -61,6 +61,7 @@ nav a {
 }
 
 p {
+  font-size: 0.9em;
   color: var(--gray);
   margin-bottom: 14px;
 }

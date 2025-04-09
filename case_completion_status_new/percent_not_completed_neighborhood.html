@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vega@6.1.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@6.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@7.0.1"></script>
+</head>
+<body>
+  <div id="vis"/>
+  <script>
+    const spec = {
+  "config": {
+    "view": {"continuousWidth": 300, "continuousHeight": 300},
+    "axis": {"labelFont": "Open Sans", "titleFont": "Open Sans"},
+    "legend": {"labelFont": "Open Sans", "titleFont": "Open Sans"},
+    "title": {"font": "Open Sans", "fontSize": 16}
+  },
+  "data": {"name": "data-e97bd5f337718aa2a78cfd58510e453e"},
+  "mark": {"type": "bar", "color": "#D3D3D3"},
+  "encoding": {
+    "tooltip": [
+      {"field": "neighborhood", "type": "nominal"},
+      {"field": "case_status", "type": "nominal"},
+      {"field": "percentage", "type": "quantitative"}
+    ],
+    "x": {"field": "neighborhood", "title": "Neighborhood", "type": "nominal"},
+    "y": {
+      "field": "percentage",
+      "title": "Percentage Not Completed",
+      "type": "quantitative"
+    }
+  },
+  "title": "Percentage of Not Completed Cases by Neighborhood",
+  "width": 600,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+  "datasets": {
+    "data-e97bd5f337718aa2a78cfd58510e453e": [
+      {
+        "neighborhood": "Allston / Brighton",
+        "case_status": "Not Completed",
+        "count": 3,
+        "percentage": 0.4975124378109453,
+        "total_cases": 603
+      },
+      {
+        "neighborhood": "Back Bay",
+        "case_status": "Not Completed",
+        "count": 1,
+        "percentage": 0.36496350364963503,
+        "total_cases": 274
+      },
+      {
+        "neighborhood": "Charlestown",
+        "case_status": "Not Completed",
+        "count": 1,
+        "percentage": 0.7518796992481203,
+        "total_cases": 133
+      },
+      {
+        "neighborhood": "Dorchester",
+        "case_status": "Not Completed",
+        "count": 2,
+        "percentage": 0.28530670470756064,
+        "total_cases": 701
+      },
+      {
+        "neighborhood": "Downtown / Financial District",
+        "case_status": "Not Completed",
+        "count": 4,
+        "percentage": 1.7316017316017316,
+        "total_cases": 231
+      },
+      {
+        "neighborhood": "East Boston",
+        "case_status": "Not Completed",
+        "count": 3,
+        "percentage": 1.0714285714285714,
+        "total_cases": 280
+      },
+      {
+        "neighborhood": "Fenway / Kenmore / Audubon Circle / Longwood",
+        "case_status": "Not Completed",
+        "count": 1,
+        "percentage": 1.282051282051282,
+        "total_cases": 78
+      },
+      {
+        "neighborhood": "Hyde Park",
+        "case_status": "Not Completed",
+        "count": 1,
+        "percentage": 0.78125,
+        "total_cases": 128
+      },
+      {
+        "neighborhood": "Jamaica Plain",
+        "case_status": "Not Completed",
+        "count": 4,
+        "percentage": 1.2121212121212122,
+        "total_cases": 330
+      },
+      {
+        "neighborhood": "Mattapan",
+        "case_status": "Not Completed",
+        "count": 2,
+        "percentage": 1.0050251256281406,
+        "total_cases": 199
+      },
+      {
+        "neighborhood": "Roslindale",
+        "case_status": "Not Completed",
+        "count": 3,
+        "percentage": 1.8633540372670807,
+        "total_cases": 161
+      },
+      {
+        "neighborhood": "Roxbury",
+        "case_status": "Not Completed",
+        "count": 8,
+        "percentage": 1.6985138004246285,
+        "total_cases": 471
+      },
+      {
+        "neighborhood": "South Boston",
+        "case_status": "Not Completed",
+        "count": 1,
+        "percentage": 3.225806451612903,
+        "total_cases": 31
+      },
+      {
+        "neighborhood": "South Boston / South Boston Waterfront",
+        "case_status": "Not Completed",
+        "count": 8,
+        "percentage": 2.484472049689441,
+        "total_cases": 322
+      },
+      {
+        "neighborhood": "South End",
+        "case_status": "Not Completed",
+        "count": 7,
+        "percentage": 1.7632241813602016,
+        "total_cases": 397
+      }
+    ]
+  }
+};
+    vegaEmbed("#vis", spec, {mode: "vega-lite"}).then(console.log).catch(console.warn);
+  </script>
+</body>
+</html>

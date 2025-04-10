@@ -237,7 +237,6 @@
             comepleteion time .
           </ul>
         </div>
-        <h3>Completion Time (Low vs High Income)</h3>
         <iframe
           src="case_completion_status/case_time_income.html"
           width="85%"
@@ -275,18 +274,15 @@
         ></iframe>
 
         <p>
-          <strong>Takeaway:</strong> This graph compares the distribution of
-          case time completion for high and low income neighborhoods. The income
-          groups are determined by the 3 highest and 3 lowest median income
-          neighborhoods in Boston. We can see that the minimum, center, and IQR
-          placement for both groups are very similar with medians around ~23
-          hours. The main difference between these graphs are the outliers in
-          the low income group. There are 3 rodent occurrence instances that all
-          have completion times above 1000 hours in Roxbury. This potentially
-          indicates a systemic disparity between public health and sanitation
-          practices for low income neighborhoods. This graph suggests, however,
-          that there is no real difference between case completion distribution
-          for low and high income neighborhoods.
+          <strong>Takeaway:</strong> This graph shows the percentage of rodent
+          occurrence cases that were not completed for the low and high income
+          neighborhoods. The income groups are determined by the 3 highest and 3
+          lowest median income neighborhoods in Boston. We can see that there is
+          a higher rate of non-completion for low income neighborhoods, with a
+          rate of .92% and .72% non-completion for the low and high income
+          neighborhoods respectively. Still these rates are below 1% and very
+          low, thus implying that non-completion is not a large issue for either
+          income bracket.
         </p>
 
         <div class="interactive-callout">
@@ -342,15 +338,17 @@
       ></iframe>
 
       <p>
-        <strong>Takeaway:</strong> This graph shows the percentage of rodent
-        occurrence cases that were not completed for the low and high income
-        neighborhoods. The income groups are determined by the 3 highest and 3
-        lowest median income neighborhoods in Boston. We can see that there is a
-        higher rate of non-completion for low income neighborhoods, with a rate
-        of .92% and .72% non-completion for the low and high income
-        neighborhoods respectively. Still these rates are below 1% and very low,
-        thus implying that non-completion is not a large issue for either income
-        bracket.
+        <strong>Takeaway: </strong>This map shows the average resolution times
+        in hours for the cases per neighborhood. The darker color represents a
+        longer resolution time and the lighter colors represent shorter
+        resolution times. The darkest red shows resolution times that took over
+        46 hours, or nearly two days. The neighborhoods that had this average
+        time were Jamaica Plain, Roxbury, Mattapan, and Downtown. The lightest
+        yellow indicates neighborhoods with average resolution times between
+        30-35 hours. These neighborhoods were Dorchester, South Boston, East
+        Boston, and Allston. This could indicate a few things. Either these
+        neighborhoods closer to the downtown area see more rat incidences, or
+        resources are diverted to the lighter yellow areas.
       </p>
     </section>
 
@@ -376,20 +374,6 @@
         </ul>
       </div>
 
-      <p>
-        This map shows the average resolution times in hours for the cases per
-        neighborhood. The darker color represents a longer resolution time and
-        the lighter colors represent shorter resolution times. The darkest red
-        shows resolution times that took over 46 hours, or nearly two days. The
-        neighborhoods that had this average time were Jamaica Plain, Roxbury,
-        Mattapan, and Downtown. The lightest yellow indicates neighborhoods with
-        average resolution times between 30-35 hours. These neighborhoods were
-        Dorchester, South Boston, East Boston, and Allston. This could indicate
-        a few things. Either these neighborhoods closer to the downtown area see
-        more rat incidences, or resources are diverted to the lighter yellow
-        areas.
-      </p>
-
       <div id="map" style="height: 600px"></div>
       <p>
         <strong>Takeaway:</strong> This map visualizes the geographic
@@ -398,7 +382,11 @@
         for immediate identification of spatial clusters and
         neighborhood-specific patterns. Denser concentrations of reports in
         certain areas suggest localized rodent issues that may correlate with
-        population density, income, or infrastructure conditions.
+        population density, income, or infrastructure conditions. Notably there
+        appears to be a more condensed cluster in neighborhoods like the South
+        End, the North End, and South Boston. In other neighborhoods like
+        Mission Hill, Fenway, and Dorchester, the rodent cases look more evenly
+        spread out but prevelant.
       </p>
     </section>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>

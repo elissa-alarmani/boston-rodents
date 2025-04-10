@@ -53,26 +53,22 @@
       </div>
 
       <p>
-        <strong>Takeaway:</strong> The racial pie charts across Boston
-        neighborhoods show a clear pattern of demographic concentration, where
-        many neighborhoods are predominantly made up of a single racial or
-        ethnic group. While some areas such as Downtown and Mission Hill reflect
-        greater racial diversity, others like Beacon Hill, South Boston, and
-        Mattapan are more homogeneous, with one racial group making up a
-        dominant share of the population. Neighborhoods like Beacon Hill and
-        South Boston are predominantly White, often with over 75% of the
-        population identifying as White Alone. In contrast, neighborhoods such
-        as Mattapan and Roxbury exhibit significantly higher proportions of
-        Black/African-American and Hispanic residents, often with those two
-        groups together forming the majority. Interestingly, Asian populations
-        tend to cluster more significantly in neighborhoods like Downtown and
-        Fenway, where their proportions are much higher relative to other areas.
-        This racial segmentation suggests that Boston’s neighborhoods are not
-        equally racially integrated, and instead reflect long-standing patterns
-        of residential segregation and socioeconomic disparities. These
-        demographic trends are essential context for understanding differences
-        in rat-related complaints and city response times, as discussed
-        throughout this project.
+        <strong>Takeaway:</strong> These charts show the racial demographic
+        distribution for each Boston neighborhood. Each racial group and its
+        corresponding percentage of population for each neighborhood is
+        displayed, and this gives us the ability to do some preliminary analysis
+        about racial concentrations in Boston, and provides context for Boston’s
+        racial makeup. White people make up the largest portion of most Boston
+        neighborhoods, with highest proportions in neighborhoods like
+        Charlestown, South Boston, and Beacon Hill. Black people make up the
+        largest proportion in neighborhoods like Mattapan and Roxbury. Hispanic
+        people make up the largest proportion in East Boston and Roxbury.
+        Finally Asian people make up the largest proportion in Downtown and
+        Allston. These charts reveal Boston’s varied racial demographics
+        throughout the city and reaffirm the value of evaluating our rodent
+        occurrence metrics separately for different neighborhoods; each
+        neighborhood is vastly different in terms of ethnicity and have diverse
+        populations.
       </p>
       <h3>Race Bar Chart by Neighborhood</h3>
 
@@ -119,6 +115,14 @@
       <h2 class="section-title">2. Rat Reports by Neighborhood</h2>
 
       <div style="display: flex; gap: 20px; flex-wrap: wrap">
+        <div class="interactive-callout">
+          <h3 style="margin-top: 0">🔍 Interactive!</h3>
+          <ul style="margin: 0; padding-left: 20px">
+            <strong>Hover over</strong>
+            each bar plot to view values regarding cases per capita, population,
+            neighborhood, and income group.
+          </ul>
+        </div>
         <div style="flex: 1 1 48%">
           <iframe
             src="rodents_per_capita/rodents_capita_neighborhood.html"
@@ -228,10 +232,9 @@
         <div class="interactive-callout">
           <h3 style="margin-top: 0">🔍 Interactive!</h3>
           <ul style="margin: 0; padding-left: 20px">
-            <li>
-              <strong>Hover over</strong> each box plot to view values as well
-              as the outliers to view comepleteion time .
-            </li>
+            <strong>Hover over</strong>
+            each box plot to view values as well as the outliers to view
+            comepleteion time .
           </ul>
         </div>
         <h3>Completion Time (Low vs High Income)</h3>
@@ -259,10 +262,9 @@
         <div class="interactive-callout">
           <h3 style="margin-top: 0">🔍 Interactive!</h3>
           <ul style="margin: 0; padding-left: 20px">
-            <li>
-              <strong>Hover over</strong> each bar segment to see the income
-              group and percentage of not completed cases.
-            </li>
+            <strong>Hover over</strong>
+            each bar segment to see the income group and percentage of not
+            completed cases.
           </ul>
         </div>
         <iframe
@@ -272,13 +274,27 @@
           style="border: none"
         ></iframe>
 
+        <p>
+          <strong>Takeaway:</strong> This graph compares the distribution of
+          case time completion for high and low income neighborhoods. The income
+          groups are determined by the 3 highest and 3 lowest median income
+          neighborhoods in Boston. We can see that the minimum, center, and IQR
+          placement for both groups are very similar with medians around ~23
+          hours. The main difference between these graphs are the outliers in
+          the low income group. There are 3 rodent occurrence instances that all
+          have completion times above 1000 hours in Roxbury. This potentially
+          indicates a systemic disparity between public health and sanitation
+          practices for low income neighborhoods. This graph suggests, however,
+          that there is no real difference between case completion distribution
+          for low and high income neighborhoods.
+        </p>
+
         <div class="interactive-callout">
           <h3 style="margin-top: 0">🔍 Interactive!</h3>
           <ul style="margin: 0; padding-left: 20px">
-            <li>
-              <strong>Hover over</strong> each bar segment to see the
-              neighborhood name and percentage of not completed cases.
-            </li>
+            <strong>Hover over</strong>
+            each bar segment to see the neighborhood name and percentage of not
+            completed cases.
           </ul>
         </div>
         <iframe
@@ -289,9 +305,53 @@
         ></iframe>
 
         <p>
-          <strong>Takeaway:</strong>
+          <strong>Takeaway: </strong> This graph shows the percentage of rodent
+          occurrence cases that were not completed for each neighborhood. All
+          neighborhoods have a very low not completed rate, ranging 0.2% to
+          3.3%. The neighborhood with the highest not completed rate is South
+          Boston. The neighborhoods with the lowest rates are Dorchester and
+          Back Bay. This indicates that some neighborhoods may have disparate
+          access to 311/sanitation/animal control government personnel, but it
+          doesn’t appear that any neighborhoods are severely unequally treated
+          by this metric.
         </p>
       </div>
+
+      <h3 class="section-title">
+        Average Resolution Times per Neighborhood Map
+      </h3>
+
+      <div class="interactive-callout">
+        <h3 style="margin-top: 0">🔍 Interactive!</h3>
+        <ul style="margin: 0; padding-left: 20px">
+          <li>
+            <strong>Hover over</strong> for neighborhood name and average
+            resolution time (hours).
+          </li>
+          <li>
+            <strong>Pan and zoom</strong> across Boston to explore rodent case
+            average resolution times by neighborhood.
+          </li>
+        </ul>
+      </div>
+      <iframe
+        src="avg_neighborhood.html"
+        width="85%"
+        height="600"
+        style="border: none"
+      ></iframe>
+
+      <p>
+        <strong>Takeaway:</strong> This graph shows the percentage of rodent
+        occurrence cases that were not completed for the low and high income
+        neighborhoods. The income groups are determined by the 3 highest and 3
+        lowest median income neighborhoods in Boston. We can see that there is a
+        higher rate of non-completion for low income neighborhoods, with a rate
+        of .92% and .72% non-completion for the low and high income
+        neighborhoods respectively. Still these rates are below 1% and very low,
+        thus implying that non-completion is not a large issue for either income
+        bracket.
+      </p>
     </section>
 
     <!-- MAP -->
@@ -317,10 +377,17 @@
       </div>
 
       <p>
-        The map displays the geographic distribution of rodent-related 311
-        complaints throughout Boston. Each data point represents a report and is
-        color-coded by neighborhood, providing visual clarity on regional
-        trends.
+        This map shows the average resolution times in hours for the cases per
+        neighborhood. The darker color represents a longer resolution time and
+        the lighter colors represent shorter resolution times. The darkest red
+        shows resolution times that took over 46 hours, or nearly two days. The
+        neighborhoods that had this average time were Jamaica Plain, Roxbury,
+        Mattapan, and Downtown. The lightest yellow indicates neighborhoods with
+        average resolution times between 30-35 hours. These neighborhoods were
+        Dorchester, South Boston, East Boston, and Allston. This could indicate
+        a few things. Either these neighborhoods closer to the downtown area see
+        more rat incidences, or resources are diverted to the lighter yellow
+        areas.
       </p>
 
       <div id="map" style="height: 600px"></div>

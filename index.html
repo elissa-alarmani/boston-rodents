@@ -88,34 +88,66 @@
     </p>
 
     <h3>Attributes in the Data:</h3>
-    <pre
+    <table
       style="
-        background-color: #f4f4f4;
-        padding: 10px;
-        border-left: 4px solid #db7093;
-        overflow-x: auto;
+        width: 90%;
+        border-collapse: collapse;
+        margin-top: 15px;
+        font-size: 0.9em;
       "
     >
-    <code>
-    ['case_enquiry_id', 'open_dt', 'sla_target_dt', 'closed_dt', 'on_time',
-     'case_status', 'closure_reason', 'case_title', 'subject', 'reason',
-     'type', 'queue', 'department', 'submitted_photo', 'closed_photo',
-     'location', 'fire_district', 'pwd_district', 'city_council_district',
-     'police_district', 'neighborhood', 'neighborhood_services_district',
-     'ward', 'precinct', 'location_street_name', 'location_zipcode',
-     'latitude', 'longitude', 'geom_4326', 'source', 'Neighborhood',
-     'Total Population', 'White Alone', 'White Alone %',
-     'Black/African-American', 'Black/African-American %', 'Hispanic',
-     'Hispanic %', 'Asian alone', 'Asian alone %', 'Other Races',
-     'Other Races %',
-     'Aggregate income in the past 12 months (in 2019 Inflation-adjusted dollars)',
-     'Per Capita Income', 'Median Income', 'Total Families',
-     'Married-couple family', 'Married-couple family %', 'Male householder',
-     'Male householder %', 'Female householder', 'Female householder %',
-     'Householder living alone', 'Householder living alone %',
-     'Householder not living alone', 'Householder not living alone %']
-    </code>
-    </pre>
+      <thead style="background-color: #db7093; color: white">
+        <tr>
+          <th style="padding: 8px; border: 1px solid #ccc">Category</th>
+          <th style="padding: 8px; border: 1px solid #ccc">Attributes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 8px; border: 1px solid #ccc">Case Details</td>
+          <td style="padding: 8px; border: 1px solid #ccc">
+            Case Enquiry ID, Case Title, Subject, Reason, Type, Queue,
+            Department, Source, Submitted Photo, Closed Photo
+          </td>
+        </tr>
+        <tr style="background-color: #f9f9f9">
+          <td style="padding: 8px; border: 1px solid #ccc">Time Information</td>
+          <td style="padding: 8px; border: 1px solid #ccc">
+            Open Date, SLA Target Date, Closed Date, On Time, Case Status,
+            Closure Reason
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 8px; border: 1px solid #ccc">Location</td>
+          <td style="padding: 8px; border: 1px solid #ccc">
+            Location, Fire District, PWD District, City Council District, Police
+            District, Neighborhood, Neighborhood Services District, Ward,
+            Precinct, Location Street Name, Location Zipcode, Latitude,
+            Longitude, geom_4326
+          </td>
+        </tr>
+        <tr style="background-color: #f9f9f9">
+          <td style="padding: 8px; border: 1px solid #ccc">Demographic Data</td>
+          <td style="padding: 8px; border: 1px solid #ccc">
+            Neighborhood, Total Population, White Alone, White Alone %,
+            Black/African-American, Black/African-American %, Hispanic, Hispanic
+            %, Asian Alone, Asian Alone %, Other Races, Other Races %
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 8px; border: 1px solid #ccc">
+            Income and Family Structure
+          </td>
+          <td style="padding: 8px; border: 1px solid #ccc">
+            Aggregate Income, Per Capita Income, Median Income, Total Families,
+            Married-couple Family, Married-couple Family %, Male Householder,
+            Male Householder %, Female Householder, Female Householder %,
+            Householder Living Alone, Householder Living Alone %, Householder
+            Not Living Alone, Householder Not Living Alone %
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
     <h2>References</h2>
     <ul>

@@ -107,18 +107,33 @@ summary {
   color: var(--gray);
 }
 
+img {
+  height: 500px;
+  display: block;
+  border: none;
+  border-radius: 8px;
+}
+
 iframe {
   border: 2px solid var(--light-gray);
   border-radius: 8px;
   background-color: #fff;
+  width: 700px;
+  margin: 20px auto;
+  display: block;
+}
+
+#racialCompositionBar {
+  width: 1100px;
+  height: 610px;
 }
 
 #map {
-  height: 800px;
-  width: 80%;
+  height: 600px;
+  width: 700px;
   border: 3px solid var(--highlight);
   border-radius: 12px;
-  margin-top: 20px;
+  margin: 20px auto;
 }
 
 .interactive-callout {

@@ -6,44 +6,52 @@ L.tileLayer(
   "https://tile.jawg.io/jawg-sunny/{z}/{x}/{y}{r}.png?access-token=HYMk9xl71FLXhzPodW32GowAavigUQJldDTriyp50JsWrq5sTzaMrLQI6QvC22PQ",
   {
     attribution:
-      '<a href="https://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank">&copy; <b>Jawg</b>Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    minZoom: 0,
+      '<a href="https://jawg.io" target="_blank">&copy; <b>Jawg</b>Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     maxZoom: 22,
-    accessToken:
-      "HYMk9xl71FLXhzPodW32GowAavigUQJldDTriyp50JsWrq5sTzaMrLQI6QvC22PQ",
   }
 ).addTo(map);
 
-// Create a D3 ordinal scale to assign colors to different neighborhoods
-const colorScale = d3.scaleOrdinal().range(d3.schemeSet1);
+// Neighborhood boundaries layer
+fetch("boston_neighborhoods.geojson")
+  .then((response) => response.json())
+  .then((geojson) => {
+    L.geoJSON(geojson, {
+      style: {
+        color: "#696969",
+        weight: 1.5,
+        fillOpacity: 0.05,
+      },
+      onEachFeature: (feature, layer) => {
+        layer.bindPopup(
+          `<strong>Neighborhood:</strong> ${feature.properties.name}`
+        );
+      },
+    }).addTo(map);
+  })
+  .catch((error) => {
+    console.error("Error loading GeoJSON:", error);
+  });
 
+// Load rodent data and plot markers
 d3.csv("rodent_data_with_neighborhoods.csv")
   .then((data) => {
-    // Filter out rows without valid latitude/longitude values
     data = data.filter((d) => d.latitude && d.longitude);
-
-    // Convert latitude and longitude from strings to numbers
     data.forEach((d) => {
       d.latitude = +d.latitude;
       d.longitude = +d.longitude;
     });
 
-    // Update the color scale domain using the unique neighborhood values
-    colorScale.domain([...new Set(data.map((d) => d.neighborhood))]);
-
-    // For each individual case, create a circle marker on the map
     data.forEach((d) => {
-      const color = colorScale(d.neighborhood);
+      const color = "#db7093";
       const marker = L.circleMarker([d.latitude, d.longitude], {
         radius: 3,
         fillColor: color,
         color: color,
         weight: 1,
-        opacity: 1,
-        fillOpacity: 0.5,
+        opacity: 0.7,
+        fillOpacity: 0.3,
       }).addTo(map);
 
-      // Bind a popup
       marker.bindPopup(
         `<strong>Case ID:</strong> ${d.case_enquiry_id}<br/>
          <strong>Neighborhood:</strong> ${d.neighborhood}<br/>
@@ -52,6 +60,4 @@ d3.csv("rodent_data_with_neighborhoods.csv")
       );
     });
   })
-  .catch((error) => {
-    console.error("Error loading data:", error);
-  });
+  .catch((error) => console.error("Error loading data:", error));

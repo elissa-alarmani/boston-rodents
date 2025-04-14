@@ -24,7 +24,12 @@
       {"field": "Total Population", "type": "quantitative"},
       {"field": "rodent_per_capita", "type": "quantitative"}
     ],
-    "x": {"field": "neighborhood", "title": "Neighborhood", "type": "nominal"},
+    "x": {
+      "field": "neighborhood",
+      "sort": "-y",
+      "title": "Neighborhood",
+      "type": "nominal"
+    },
     "y": {
       "field": "rodent_per_capita",
       "title": "Rodents per Capita",

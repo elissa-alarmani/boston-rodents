@@ -14,202 +14,203 @@
       <a href="conclusion.html">Conclusion</a>
     </nav>
 
-    <h1>
-      Boston’s Rampant Rodents: Which neighborhoods face the most infestation?
-    </h1>
-    <h2>Introduction</h2>
-    <div
-      style="
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        align-items: flex-start;
-        margin-bottom: 30px;
-      "
-    >
-      <!-- Text -->
-      <div style="flex: 1 1 60%">
-        <p>
-          This project is studying the presence of rodents in Boston
-          neighborhoods and analyzing what communities experience the most
-          issues with them. This topic is important because there are often
-          significant differences in cleanliness of neighborhoods and quality of
-          living conditions in major cities, including Boston. We examine
-          whether these differences in clean living conditions vary amongst
-          Boston neighborhoods by race and income in order to address a larger
-          problem of inequality in the United States. Specifically, focusing on
-          the presence of rodents in Boston allows us to draw connections
-          between these important issues and uncover interesting information on
-          who experiences the most problems with rodents in the city, and what
-          other factors may be lying beneath those findings.
-        </p>
-      </div>
+    <section style="padding: 40px 20px">
+      <h1 style="color: #db7093; font-size: 2.5em; margin-bottom: 10px">
+        Boston’s Rampant Rodents: Which neighborhoods face the most infestation?
+      </h1>
+      <hr
+        style="border: none; border-top: 2px solid #f1c9d5; margin-bottom: 40px"
+      />
 
-      <!-- Image -->
-      <div style="flex: 1 1 35%; text-align: center">
-        <img
-          src="rodent_complaints.jpeg"
-          alt="WCVB Rodent Complaints vs Income and Resolution Time"
-          style="width: 50%; border: 1px solid #ccc; border-radius: 8px"
-        />
-        <figcaption style="font-size: 0.7em; margin-top: 8px; color: #555">
-          WCVB news indicates the relationship between rodent-related
-          complaints, average neighborhood income, and time spent resolving
-          those complaints.
-        </figcaption>
-      </div>
-    </div>
+      <h2 style="color: #444">Introduction</h2>
 
-    <h2>Data</h2>
-    <p>
-      We used two datasets from the City of Boston’s open data portal: the
-      <a
-        href="https://data.boston.gov/dataset/311-service-requests"
-        target="_blank"
-        >311 Service Requests dataset</a
+      <div
+        style="
+          display: flex;
+          flex-wrap: wrap;
+          gap: 30px;
+          align-items: flex-start;
+        "
       >
-      and the
-      <a
-        href="https://data.boston.gov/dataset/neighborhood-demographics/resource/d8c23c6a-b868-4ba4-8a3b-b9615a21be07"
-        target="_blank"
-        >Neighborhood Demographics dataset</a
-      >. The 311 dataset contains over 200,000 records, but it has been cleaned
-      to capture the 5,015 entries related to rodent activity. The Neighborhood
-      Demographics dataset provides us with socioeconomic data like household
-      income, racial composition, and population size. Merging these two
-      datasets allowed for us to analyze rodent activity about socioeconomic
-      factors in Boston, making it suitable for our analysis. It also includes
-      geospatial data to analyze the rodent activity. By merging these datasets
-      on the neighborhood field, we examined whether lower-income and racially
-      marginalized communities experience disproportionately high rodent
-      activity and slower municipal response times. More specifically, we used
-      the features relating to percentage of a racial demographic in each
-      neighborhood, income levels, and open and close date for case information.
-    </p>
+        <div style="flex: 1 1 60%; min-width: 300px">
+          <p style="line-height: 1.6; color: #444">
+            This project is studying the presence of rodents in Boston
+            neighborhoods and analyzing what communities experience the most
+            issues with them. This topic is important because there are often
+            significant differences in cleanliness of neighborhoods and quality
+            of living conditions in major cities, including Boston. We examine
+            whether these differences in clean living conditions vary amongst
+            Boston neighborhoods by race and income in order to address a larger
+            problem of inequality in the United States. Specifically, focusing
+            on the presence of rodents in Boston allows us to draw connections
+            between these important issues and uncover interesting information
+            on who experiences the most problems with rodents in the city, and
+            what other factors may be lying beneath those findings.
+          </p>
+        </div>
 
-    <h3>Attributes in the Data:</h3>
-    <table
-      style="
-        width: 90%;
-        border-collapse: collapse;
-        margin-top: 15px;
-        font-size: 0.9em;
-      "
-    >
-      <thead style="background-color: #db7093; color: white">
-        <tr>
-          <th style="padding: 8px; border: 1px solid #ccc">Category</th>
-          <th style="padding: 8px; border: 1px solid #ccc">Attributes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="padding: 8px; border: 1px solid #ccc">Case Details</td>
-          <td style="padding: 8px; border: 1px solid #ccc">
-            Case Enquiry ID, Case Title, Subject, Reason, Type, Queue,
-            Department, Source, Submitted Photo, Closed Photo
-          </td>
-        </tr>
-        <tr style="background-color: #f9f9f9">
-          <td style="padding: 8px; border: 1px solid #ccc">Time Information</td>
-          <td style="padding: 8px; border: 1px solid #ccc">
-            Open Date, SLA Target Date, Closed Date, On Time, Case Status,
-            Closure Reason
-          </td>
-        </tr>
-        <tr>
-          <td style="padding: 8px; border: 1px solid #ccc">Location</td>
-          <td style="padding: 8px; border: 1px solid #ccc">
-            Location, Fire District, PWD District, City Council District, Police
-            District, Neighborhood, Neighborhood Services District, Ward,
-            Precinct, Location Street Name, Location Zipcode, Latitude,
-            Longitude, geom_4326
-          </td>
-        </tr>
-        <tr style="background-color: #f9f9f9">
-          <td style="padding: 8px; border: 1px solid #ccc">Demographic Data</td>
-          <td style="padding: 8px; border: 1px solid #ccc">
-            Neighborhood, Total Population, White Alone, White Alone %,
-            Black/African-American, Black/African-American %, Hispanic, Hispanic
-            %, Asian Alone, Asian Alone %, Other Races, Other Races %
-          </td>
-        </tr>
-        <tr>
-          <td style="padding: 8px; border: 1px solid #ccc">
-            Income and Family Structure
-          </td>
-          <td style="padding: 8px; border: 1px solid #ccc">
-            Aggregate Income, Per Capita Income, Median Income, Total Families,
-            Married-couple Family, Married-couple Family %, Male Householder,
-            Male Householder %, Female Householder, Female Householder %,
-            Householder Living Alone, Householder Living Alone %, Householder
-            Not Living Alone, Householder Not Living Alone %
-          </td>
-        </tr>
-      </tbody>
-    </table>
+        <div style="flex: 1 1 35%; min-width: 250px; text-align: center">
+          <img
+            src="rodent_complaints.jpeg"
+            alt="WCVB Rodent Complaints vs Income and Resolution Time"
+            style="
+              width: 100%;
+              max-width: 300px;
+              height: auto;
+              border: 1px solid #ccc;
+              border-radius: 6px;
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+            "
+          />
+          <figcaption style="font-size: 0.8em; color: #555; margin-top: 10px">
+            WCVB news indicates the relationship between rodent-related
+            complaints, average neighborhood income, and time spent resolving
+            those complaints.
+          </figcaption>
+        </div>
+      </div>
+    </section>
 
-    <h2>References</h2>
-    <ul>
-      <li>
-        Beaudet, M. (2016, December 8).
+    <section style="padding: 20px">
+      <h2>Data</h2>
+      <p>
+        We used two datasets from the City of Boston’s open data portal: the
         <a
-          href="https://www.wcvb.com/article/as-rodent-complaints-jump-in-boston-poorer-neighborhoods-see-delay-in-response/8480603"
+          href="https://data.boston.gov/dataset/311-service-requests"
           target="_blank"
+          >311 Service Requests dataset</a
         >
-          As rodent complaints jump in Boston, poorer neighborhoods see delay in
-          relief </a
-        >. WCVB.
-      </li>
-      <li>
-        Buyinza, A. (2023, May 8).
+        and the
         <a
-          href="https://www.masslive.com/news/2023/05/why-there-are-so-many-rats-in-boston-and-what-officials-are-trying-to-do-about-it.html"
+          href="https://data.boston.gov/dataset/neighborhood-demographics/resource/d8c23c6a-b868-4ba4-8a3b-b9615a21be07"
           target="_blank"
-        >
-          Why there are so many rats in Boston, and what officials are trying to
-          do about it </a
-        >. MassLive.
-      </li>
-      <li>
-        Corrigan, R., Urban, R., & Chappaqua, N. (2024).
-        <a
-          href="https://www.boston.gov/sites/default/files/file/2024/07/Final%20Full%20BRAP%20Report.pdf"
-          target="_blank"
-        >
-          The Boston Rat Action Plan Final Report: Part II </a
-        >.
-      </li>
-      <li>
-        Lee, S. (2021, November 15).
-        <a
-          href="https://www.renthop.com/research/rodent-complaints-2021/"
-          target="_blank"
-        >
-          Are Rats Ruling Your Neighborhood? Real Estate Data & Research </a
-        >.
-      </li>
-    </ul>
+          >Neighborhood Demographics dataset</a
+        >. The 311 dataset contains over 200,000 records, but it has been
+        cleaned to capture the 5,015 entries related to rodent activity. The
+        Neighborhood Demographics dataset provides us with socioeconomic data
+        like household income, racial composition, and population size. Merging
+        these two datasets allowed for us to analyze rodent activity about
+        socioeconomic factors in Boston, making it suitable for our analysis. It
+        also includes geospatial data to analyze the rodent activity. By merging
+        these datasets on the neighborhood field, we examined whether
+        lower-income and racially marginalized communities experience
+        disproportionately high rodent activity and slower municipal response
+        times. More specifically, we used the features relating to percentage of
+        a racial demographic in each neighborhood, income levels, and open and
+        close date for case information.
+      </p>
+
+      <h3>Attributes in the Data:</h3>
+      <table
+        style="
+          width: 100%;
+          border-collapse: collapse;
+          margin-top: 15px;
+          font-size: 0.9em;
+        "
+      >
+        <thead style="background-color: #db7093; color: white">
+          <tr>
+            <th style="padding: 8px; border: 1px solid #ccc">Category</th>
+            <th style="padding: 8px; border: 1px solid #ccc">Attributes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding: 8px; border: 1px solid #ccc">Case Details</td>
+            <td style="padding: 8px; border: 1px solid #ccc">
+              Case Enquiry ID, Case Title, Subject, Reason, Type, Queue,
+              Department, Source, Submitted Photo, Closed Photo
+            </td>
+          </tr>
+          <tr style="background-color: #f9f9f9">
+            <td style="padding: 8px; border: 1px solid #ccc">
+              Time Information
+            </td>
+            <td style="padding: 8px; border: 1px solid #ccc">
+              Open Date, SLA Target Date, Closed Date, On Time, Case Status,
+              Closure Reason
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; border: 1px solid #ccc">Location</td>
+            <td style="padding: 8px; border: 1px solid #ccc">
+              Location, Fire District, PWD District, City Council District,
+              Police District, Neighborhood, Neighborhood Services District,
+              Ward, Precinct, Location Street Name, Location Zipcode, Latitude,
+              Longitude, geom_4326
+            </td>
+          </tr>
+          <tr style="background-color: #f9f9f9">
+            <td style="padding: 8px; border: 1px solid #ccc">
+              Demographic Data
+            </td>
+            <td style="padding: 8px; border: 1px solid #ccc">
+              Neighborhood, Total Population, White Alone, White Alone %,
+              Black/African-American, Black/African-American %, Hispanic,
+              Hispanic %, Asian Alone, Asian Alone %, Other Races, Other Races %
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; border: 1px solid #ccc">
+              Income and Family Structure
+            </td>
+            <td style="padding: 8px; border: 1px solid #ccc">
+              Aggregate Income, Per Capita Income, Median Income, Total
+              Families, Married-couple Family, Married-couple Family %, Male
+              Householder, Male Householder %, Female Householder, Female
+              Householder %, Householder Living Alone, Householder Living Alone
+              %, Householder Not Living Alone, Householder Not Living Alone %
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section style="padding: 20px">
+      <h2>References</h2>
+      <ul>
+        <li>
+          Beaudet, M. (2016, December 8).
+          <a
+            href="https://www.wcvb.com/article/as-rodent-complaints-jump-in-boston-poorer-neighborhoods-see-delay-in-response/8480603"
+            target="_blank"
+          >
+            As rodent complaints jump in Boston, poorer neighborhoods see delay
+            in relief </a
+          >. WCVB.
+        </li>
+        <li>
+          Buyinza, A. (2023, May 8).
+          <a
+            href="https://www.masslive.com/news/2023/05/why-there-are-so-many-rats-in-boston-and-what-officials-are-trying-to-do-about-it.html"
+            target="_blank"
+          >
+            Why there are so many rats in Boston, and what officials are trying
+            to do about it </a
+          >. MassLive.
+        </li>
+        <li>
+          Corrigan, R., Urban, R., & Chappaqua, N. (2024).
+          <a
+            href="https://www.boston.gov/sites/default/files/file/2024/07/Final%20Full%20BRAP%20Report.pdf"
+            target="_blank"
+          >
+            The Boston Rat Action Plan Final Report: Part II </a
+          >.
+        </li>
+        <li>
+          Lee, S. (2021, November 15).
+          <a
+            href="https://www.renthop.com/research/rodent-complaints-2021/"
+            target="_blank"
+          >
+            Are Rats Ruling Your Neighborhood? Real Estate Data & Research
+          </a>
+        </li>
+      </ul>
+    </section>
   </body>
-
-  <footer>
-    <nav style="margin-bottom: 10px">
-      <a
-        href="index.html"
-        style="margin: 0 10px; text-decoration: none; color: #333"
-        >Introduction</a
-      >
-      <a
-        href="visualizations.html"
-        style="margin: 0 10px; text-decoration: none; color: #333"
-        >Visualizations</a
-      >
-      <a
-        href="conclusion.html"
-        style="margin: 0 10px; text-decoration: none; color: #333"
-        >Conclusion</a
-      >
-    </nav>
-    <p style="margin: 0">🐀 Made with care for DS4200 - Group 11</p>
-  </footer>
 </html>
